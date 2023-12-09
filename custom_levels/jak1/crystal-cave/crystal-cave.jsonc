@@ -1908,7 +1908,7 @@
       "trans": [-233.06, 69.01, -126.40], // translation
       "etype": "swingpole",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
-      "quat" : [0.680, -0.195, 0.195, -0.680], // quaternion - Along Z axis in Blender
+      "quat" : [-0.688, 0.165, -0.165, -0.688], // quaternion - Along Z axis in Blender
       "bsphere": [-233.06, 69.01, -126.40, 10.0], // bounding sphere
       "lump": {
         "name":"crystalc-swingpole-01"
