@@ -140,6 +140,10 @@
       ;; spawn at the geyser warp gate checkpoint
       (initialize! *game-info* 'game (the-as game-save #f) "game-start")
       )
+    (((speedrun-category tfl-game)) ;; TFL note: Speedrun reset setup
+      ;; spawn at the crystal cave warp gate checkpoint
+      (initialize! *game-info* 'game (the-as game-save #f) "crystal-cave-warp")
+      )
     (((speedrun-category il-training))
       ;; spawn at the geyser warp gate checkpoint
       (initialize! *game-info* 'game (the-as game-save #f) "game-start")
@@ -246,6 +250,10 @@
     (set! (-> *speedrun-info* needs-post-blackout-setup?) #f)
     (case (-> *speedrun-info* category)
       (((speedrun-category full-game))
+        ;; skip intro cutscene
+        (close-specific-task! (game-task intro) (task-status need-resolution))
+        )
+      (((speedrun-category tfl-game)) ;; TFL note: speedrun reset skip intro
         ;; skip intro cutscene
         (close-specific-task! (game-task intro) (task-status need-resolution))
         )
