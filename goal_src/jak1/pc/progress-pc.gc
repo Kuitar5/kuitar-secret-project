@@ -329,6 +329,7 @@
   (new 'static 'boxed-array :type game-option
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-reset-current-run) :scale #t)
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-new-full-game) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-new-tfl-game) :scale #t) ;; TFL note: speedrun reset
     (new 'static 'game-option :option-type (game-option-type menu) :name (text-id speedrun-new-individual-level) :scale #t :param3 (game-option-menu speedrun-il-options))
     (new 'static 'game-option :option-type (game-option-type menu) :name (text-id speedrun-new-cat-ext) :scale #t :param3 (game-option-menu speedrun-cat-ext-options))
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id back) :scale #t)
@@ -360,6 +361,7 @@
 (define *speedrun-cat-ext-options*
   (new 'static 'boxed-array :type game-option
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-new-full-game) :scale #t)
+    (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-new-tfl-game) :scale #t) ;; TFL note: speedrun reset
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-new-game-plus) :scale #t)
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-hub1-100) :scale #t)
     (new 'static 'game-option :option-type (game-option-type button) :name (text-id speedrun-hub2-100) :scale #t)
@@ -1511,6 +1513,10 @@
                  ;; Full game runs
                  (((text-id speedrun-new-full-game))
                   (progress-fast-save-and-start-speedrun (speedrun-category full-game))
+                  )
+                 ;; TFL note: speedrun reset Full game runs
+                 (((text-id speedrun-new-tfl-game))
+                  (progress-fast-save-and-start-speedrun (speedrun-category tfl-game))
                   )
                  ;; Individual Levels
                  (((text-id speedrun-il-training))
@@ -2789,7 +2795,7 @@
         (((progress-screen speedrun-options))
          (hide-progress-icons)
          (draw-notice-screen self)
-         (draw-options self 155 25 0.65)
+         (draw-options self 155 20 0.6)
           )
         (((progress-screen camera-options) (progress-screen checkpoint-select) (progress-screen speedrun-il-options) (progress-screen speedrun-cat-ext-options))
          ;; camera options lines are a bit too big
