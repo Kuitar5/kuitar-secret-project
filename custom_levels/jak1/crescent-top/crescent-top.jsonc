@@ -997,11 +997,11 @@
       }
     },
     {
-      "trans": [-256.36, 200.61, 679.68], // translation
+      "trans": [-221.66, 250.09, 655.21], // translation
       "etype": "money",  // actor type
       "game_task": 0, // associated game task (for powercells, etc)
       "quat" : [0, 0, 0, 1], // quaternion
-      "bsphere": [-256.36, 200.61, 679.68, 10], // bounding sphere
+      "bsphere": [-221.66, 250.09, 655.21, 10], // bounding sphere
       "lump": {
         "name":"crescent-money-079"
       }
@@ -2601,6 +2601,7 @@
           [-234.07, 241.47, 670.68, 1.0]
           ],
         "sync": ["float", 6.0, 0.0]
+        ,"scale":["float", 1.5]
       }
     },
     {
