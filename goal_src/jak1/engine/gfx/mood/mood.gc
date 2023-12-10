@@ -2987,9 +2987,9 @@
       (set! (-> v1-34 direction z) -0.3)
       (set! (-> v1-34 direction w) 1.0)
       )
-    (set-vector! (-> s5-1 dir2 color) 0.10 0.35 0.55 1.0)                              ;; COLOR OF THE KEY LIGHT
+    (set-vector! (-> s5-1 dir2 color) 0.20 0.35 0.50 1.0)                              ;; COLOR OF THE KEY LIGHT
     (set! (-> s5-1 dir2 levels x) 1.0) 
-    (set-vector! (-> s5-1 ambi color) -0.15 0.15 0.35 1.0)                              ;; COLOR OF THE AMBIANT LIGHT
+    (set-vector! (-> s5-1 ambi color) -0.05 0.10 0.25 1.0)                              ;; COLOR OF THE AMBIANT LIGHT
     )
 
   ;; CHECK JAK POSITION FOR INDEX-LIGHT

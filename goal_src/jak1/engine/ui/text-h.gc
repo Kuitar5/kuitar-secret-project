@@ -806,6 +806,7 @@
   (catalan                      #x1119)
   (icelandic                    #x111a)
   (polish                       #x111b)
+  (lithuanian                   #x111c)
   (scene-0                      #x1200)
   (scene-255                    #x12ff)
   (hint-0                       #x1300)
@@ -847,6 +848,7 @@
   (speedrun-hub2-100             #x1522)
   (speedrun-hub3-100             #x1523)
   (speedrun-all-cutscenes        #x1524)
+  (speedrun-new-tfl-game         #x1525) ;; TFL note: speedrun reset text
 
   ;; input options
   (input-options #x1600)

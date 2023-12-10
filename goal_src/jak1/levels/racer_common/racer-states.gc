@@ -854,7 +854,7 @@
     (target-timed-invulnerable-off self)
     (logior! (-> self state-flags) (state-flags dying))
     (case (-> self attack-info mode)
-      (('explode 'darkeco 'heat 'death 'deadly 'balloonlurker)
+      (('explode 'darkeco 'heat 'death 'deadly 'deadlyup 'balloonlurker)
        ((-> target-racing-start exit))
        (send-event (ppointer->process (-> self manipy)) 'anim-mode 'loop)
        (send-event (ppointer->process (-> self manipy)) 'draw #f)

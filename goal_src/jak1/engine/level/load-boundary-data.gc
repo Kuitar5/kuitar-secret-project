@@ -1274,11 +1274,18 @@
   )
 
 (static-load-boundary :flags (player ignore-racing)
-  :top (meters 305.15)  :bot (meters 256.16)
-  :points (  (meters 404.99) (meters 613.25)  (meters 387.06) (meters 540.26)  (meters 330.3) (meters 564.38)  (meters 392.3) (meters 627.29))
+  :top (meters 313.17)  :bot (meters 247.99)
+  :points ((meters 417.97)(meters 498.39)  (meters 298.32)(meters 589.74))
   :fwd (checkpt "crescent-top-near-bay" #f)
   :bwd (checkpt "crescent-top-near-bay" #f)
   )
+
+;; (static-load-boundary :flags (player ignore-racing) ;; Previous one, only if you go up the small challenge
+;;   :top (meters 305.15)  :bot (meters 256.16)
+;;   :points (  (meters 404.99) (meters 613.25)  (meters 387.06) (meters 540.26)  (meters 330.3) (meters 564.38)  (meters 392.3) (meters 627.29))
+;;   :fwd (checkpt "crescent-top-near-bay" #f)
+;;   :bwd (checkpt "crescent-top-near-bay" #f)
+;;   )
 
 (static-load-boundary :flags (player )
   :top (meters 222.27)  :bot (meters 197.45)
@@ -1290,6 +1297,13 @@
 (static-load-boundary :flags (player )
   :top (meters 231.61)  :bot (meters 202.59)
   :points (  (meters 175.29) (meters 396.88)  (meters 178.78) (meters 447.31))
+  :fwd (checkpt "crescent-top-zoomer2" #f)
+  :bwd (checkpt "crescent-top-zoomer2" #f)
+  )
+
+(static-load-boundary :flags (player )
+  :top (meters 300.72)  :bot (meters 166.86)
+  :points (  (meters 231.74) (meters 225.45)  (meters 194.87) (meters 514.57))
   :fwd (checkpt "crescent-top-zoomer2" #f)
   :bwd (checkpt "crescent-top-zoomer2" #f)
   )
